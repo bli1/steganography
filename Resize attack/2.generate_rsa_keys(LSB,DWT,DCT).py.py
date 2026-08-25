@@ -4,7 +4,7 @@ from cryptography.hazmat.primitives import serialization
 # 1. 生成 RSA 私钥（2048 位够用）
 private_key = rsa.generate_private_key(
     public_exponent=65537,
-    key_size=1024,
+    key_size=2048,
 )
 
 # 2. 导出并保存私钥（PEM）

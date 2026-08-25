@@ -68,7 +68,7 @@ def ensure_keys():
         return
 
     print("Generating RSA keys...")
-    pk = rsa.generate_private_key(public_exponent=65537, key_size=1024)
+    pk = rsa.generate_private_key(public_exponent=65537, key_size=2048)
     pub = pk.public_key()
 
     with open(PRIV_KEY_PATH, "wb") as f:

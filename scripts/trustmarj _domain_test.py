@@ -3,7 +3,6 @@ import time
 import math
 import base64
 import hashlib
-from pathlib import Path
 
 import cv2
 import numpy as np
@@ -16,17 +15,7 @@ from cryptography.hazmat.primitives import hashes, serialization
 
 
 # ========================= PATHS =========================
-# Expected layout:
-# steganography-main/
-# |-- private_key.pem
-# |-- public_key.pem
-# |-- TrustMark_encoded/
-# `-- scripts/
-#     `-- trustmark_denoising_attack_test.py
-#
-# The script is inside scripts/, so parents[1] is steganography-main/.
-ROOT = Path(__file__).resolve().parents[1]
-BASE_DIR = str(ROOT)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 TRUSTMARK_DIR = os.path.join(BASE_DIR, "TrustMark_encoded")
 OUTPUT_DIR = os.path.join(BASE_DIR, "TrustMark_denoising_attack")
 ATTACKED_DIR = os.path.join(OUTPUT_DIR, "attacked_images")
