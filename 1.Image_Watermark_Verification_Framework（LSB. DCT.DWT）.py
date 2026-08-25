@@ -18,8 +18,7 @@ PRIV_KEY_PATH = os.path.join(BASE_DIR, "private_key.pem")
 PUB_KEY_PATH = os.path.join(BASE_DIR, "public_key.pem")
 
 WATERMARK_TEXT = "ASys Encryption"
-
-
+00000
 def read_cv_image_3ch(path):
     img = cv2.imread(path, cv2.IMREAD_UNCHANGED)
     if img is None:
